@@ -1,0 +1,56 @@
+name: SISYPHE — veille hebdomadaire
+
+# Récupère chaque semaine la couche "veille" (ReliefWeb + OMS) et ouvre/actualise
+# une Pull Request. Fusionner la PR = validation en un clic par le clinicien.
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"     # tous les lundis à 04:00 UTC
+  workflow_dispatch: {}      # permet aussi un déclenchement manuel
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dépendances
+        run: pip install requests
+
+      - name: Récupérer les données de veille
+        run: python scripts/fetch_data.py
+
+      - name: Ouvrir / mettre à jour la Pull Request de validation
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Veille SISYPHE : mise à jour des alertes (automatique)"
+          branch: veille/maj-auto
+          delete-branch: true
+          title: "🔄 Veille SISYPHE — alertes à valider"
+          body: |
+            Mise à jour automatique **hebdomadaire** de la veille SISYPHE.
+
+            **Sources :** ReliefWeb API · DTM/IOM (via ReliefWeb) · OMS Disease Outbreak News.
+
+            Cette PR met à jour `data/overlay.json` **et injecte** la veille directement
+            dans le fichier HTML (`window.SISYPHE_OVERLAY`) — SISYPHE reste donc un fichier
+            unique, hors-ligne, sans site à héberger.
+
+            ➡️ **Validation :** relisez le diff (alertes ajoutées / retirées par pays),
+            puis **fusionnez cette PR**. Récupérez ensuite le fichier HTML mis à jour.
+            Si une alerte vous semble erronée, éditez le fichier avant de fusionner.
+
+            _La veille ne modifie jamais le contenu clinique (posologies, protocoles, traductions)._
+          labels: |
+            veille
+            à-valider

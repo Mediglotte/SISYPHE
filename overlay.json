@@ -1,0 +1,146 @@
+{
+  "appname": "sisyphe-clinical-tool",
+  "countries": {
+    "afghanistan": {
+      "alerts": [
+        {
+          "date": "2026-06-15",
+          "kind": "reliefweb",
+          "source": "ReliefWeb / OCHA",
+          "title": "Rapport de situation (ReliefWeb)",
+          "url": "https://reliefweb.int/country/afg"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "dtm",
+          "source": "DTM / IOM",
+          "title": "Suivi des déplacements (DTM / IOM)",
+          "url": "https://dtm.iom.int"
+        }
+      ],
+      "updated": "2026-06-15"
+    },
+    "palestine": {
+      "alerts": [
+        {
+          "date": "2026-06-15",
+          "kind": "reliefweb",
+          "source": "ReliefWeb / OCHA",
+          "title": "Rapport de situation (ReliefWeb)",
+          "url": "https://reliefweb.int/country/pse"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "dtm",
+          "source": "DTM / IOM",
+          "title": "Suivi des déplacements (DTM / IOM)",
+          "url": "https://dtm.iom.int"
+        }
+      ],
+      "updated": "2026-06-15"
+    },
+    "rdc": {
+      "alerts": [
+        {
+          "date": "2026-06-15",
+          "kind": "reliefweb",
+          "source": "ReliefWeb / OCHA",
+          "title": "Rapport de situation (ReliefWeb)",
+          "url": "https://reliefweb.int/country/cod"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "dtm",
+          "source": "DTM / IOM",
+          "title": "Suivi des déplacements (DTM / IOM)",
+          "url": "https://dtm.iom.int"
+        }
+      ],
+      "updated": "2026-06-15"
+    },
+    "soudan": {
+      "alerts": [
+        {
+          "date": "2026-06-15",
+          "kind": "reliefweb",
+          "source": "ReliefWeb / OCHA",
+          "title": "Rapport de situation (ReliefWeb)",
+          "url": "https://reliefweb.int/country/sdn"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "dtm",
+          "source": "DTM / IOM",
+          "title": "Suivi des déplacements (DTM / IOM)",
+          "url": "https://dtm.iom.int"
+        }
+      ],
+      "updated": "2026-06-15"
+    },
+    "syrie": {
+      "alerts": [
+        {
+          "date": "2026-06-15",
+          "kind": "reliefweb",
+          "source": "ReliefWeb / OCHA",
+          "title": "Rapport de situation (ReliefWeb)",
+          "url": "https://reliefweb.int/country/syr"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "dtm",
+          "source": "DTM / IOM",
+          "title": "Suivi des déplacements (DTM / IOM)",
+          "url": "https://dtm.iom.int"
+        }
+      ],
+      "updated": "2026-06-15"
+    },
+    "ukraine": {
+      "alerts": [
+        {
+          "date": "2026-06-15",
+          "kind": "reliefweb",
+          "source": "ReliefWeb / OCHA",
+          "title": "Rapport de situation (ReliefWeb)",
+          "url": "https://reliefweb.int/country/ukr"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "dtm",
+          "source": "DTM / IOM",
+          "title": "Suivi des déplacements (DTM / IOM)",
+          "url": "https://dtm.iom.int"
+        }
+      ],
+      "updated": "2026-06-15"
+    },
+    "yemen": {
+      "alerts": [
+        {
+          "date": "2026-06-15",
+          "kind": "reliefweb",
+          "source": "ReliefWeb / OCHA",
+          "title": "Rapport de situation (ReliefWeb)",
+          "url": "https://reliefweb.int/country/yem"
+        },
+        {
+          "date": "2026-06-15",
+          "kind": "dtm",
+          "source": "DTM / IOM",
+          "title": "Suivi des déplacements (DTM / IOM)",
+          "url": "https://dtm.iom.int"
+        }
+      ],
+      "updated": "2026-06-15"
+    }
+  },
+  "generated": "2026-06-15T09:40:38Z",
+  "note": "EXEMPLE de seed - remplace au premier passage de l'Action. A valider par un clinicien.",
+  "sources": [
+    "ReliefWeb API",
+    "OMS Disease Outbreak News",
+    "DTM / IOM",
+    "Institut Pasteur"
+  ]
+}
