@@ -4,7 +4,7 @@
      repli sur le cache si hors-ligne ;
    - autres ressources (manifest, icônes) : cache d'abord.
    Bumper CACHE à chaque nouvelle version pour forcer la mise à jour. */
-const CACHE = 'sisyphe-v1';
+const CACHE = 'sisyphe-v2';
 const ASSETS = [
   './',
   './index.html',
